@@ -52,8 +52,10 @@ class PostController extends Controller
             $formData['image'] = $path;
         }
         $post = Post::create($formData);
+        //dd($path);
         return redirect()->route('admin.posts.show', $post->id);
     }
+
 
     /**
      * Display the specified resource.
